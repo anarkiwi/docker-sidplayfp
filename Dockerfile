@@ -10,7 +10,7 @@ RUN autoreconf -ivf && ./configure --enable-debug && make && make install
 WORKDIR /src/sidplayfp
 RUN autoreconf -ivf && CFLAGS="-I/src/libsidplayfp" ./configure --enable-debug && make -j$(nproc) && make install
 FROM ubuntu:22.04
-RUN apt-get update && apt-get install --no-install-recommends -yq libgcrypt20
+RUN apt-get update && apt-get install --no-install-recommends -yq libgcrypt20 libgomp1
 COPY --from=builder /usr/local /usr/local
 RUN ldconfig
 RUN /usr/local/bin/sidplayfp --help
