@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install --no-install-recommends -yq automake autoc
     apt-get clean && rm -rf /var/lib/apt/lists/*
 WORKDIR /src
 RUN git clone https://github.com/libsidplayfp/libsidplayfp -b v2.6.0 --recurse-submodules
-RUN git clone https://github.com/libsidplayfp/sidplayfp -b v2.6.1
+RUN git clone https://github.com/libsidplayfp/sidplayfp -b v2.6.2
 WORKDIR /src/libsidplayfp
 RUN autoreconf -ivf && ./configure --enable-debug && make && make install
 WORKDIR /src/sidplayfp
