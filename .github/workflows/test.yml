@@ -9,5 +9,3 @@ jobs:
         with:
           push: false
           tags: anarkiwi/sidplayfp:latest
-          build-args: |
-            SIDPLAY_VERSION=master
