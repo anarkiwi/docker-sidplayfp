@@ -34,6 +34,4 @@ jobs:
         platforms: linux/amd64
         push: true
         tags: anarkiwi/sidplayfp:${{ steps.change_version.outputs.VERSION }}
-        build-args: |
-          SIDPLAY_VERSION=${{ steps.change_version.outputs.VERSION }}
       if: github.event_name == 'push'

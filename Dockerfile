@@ -1,5 +1,5 @@
 FROM ubuntu:24.04 as builder
-ARG SIDPLAY_VERSION
+ARG SIDPLAY_VERSION=master
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install --no-install-recommends -yq automake autoconf ca-certificates g++ git wget make pkg-config libtool xa65 libgcrypt20-dev gettext && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
