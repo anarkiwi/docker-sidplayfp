@@ -1,13 +1,6 @@
 ---
 version: 2
 updates:
-  - package-ecosystem: "pip"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    ignore:
-      - dependency-name: "eventlet"
-
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
