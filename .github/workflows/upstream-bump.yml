@@ -61,7 +61,7 @@ jobs:
 
       - name: open pull request
         if: steps.up.outputs.changed == 'true'
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           branch: upstream-${{ steps.up.outputs.version }}
           commit-message: "sidplayfp ${{ steps.up.outputs.version }}"
