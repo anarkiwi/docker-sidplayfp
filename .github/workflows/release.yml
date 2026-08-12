@@ -26,7 +26,7 @@ jobs:
           echo "version=${version}" >> "${GITHUB_OUTPUT}"
           echo "bare=${version#v}" >> "${GITHUB_OUTPUT}"
 
-      - uses: docker/setup-buildx-action@v3
+      - uses: docker/setup-buildx-action@v4
 
       - name: build
         uses: docker/build-push-action@v6
