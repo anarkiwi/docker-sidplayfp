@@ -1,0 +1,5 @@
+ignored:
+  # Debian package versions are not pinned; the base image tag is.
+  - DL3008
+  # Separate RUN steps keep each upstream build independently cached.
+  - DL3059
