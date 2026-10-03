@@ -8,9 +8,9 @@
 # its own project, and libsidplayfp's configure only warns when it is missing,
 # producing a library that fails at play time with "Requested SID emulation not
 # built in". tests/smoke.sh plays a tune to catch that.
-ARG SIDPLAYFP_VERSION=v3.2.0
+ARG SIDPLAYFP_VERSION=v3.2.1
 ARG LIBSIDPLAYFP_VERSION=v3.1.1
-ARG LIBRESIDFP_VERSION=v1.2.2
+ARG LIBRESIDFP_VERSION=v1.2.3
 
 FROM ubuntu:26.04 AS builder
 ARG SIDPLAYFP_VERSION
